@@ -5,9 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/**
- * Created by hb2017 on 2016-08-03.
- */
 public class BookDAO extends SQLiteOpenHelper {
     public static final String TABLE_NAME ="book";
     public static final String SEQ2 ="seq2";
