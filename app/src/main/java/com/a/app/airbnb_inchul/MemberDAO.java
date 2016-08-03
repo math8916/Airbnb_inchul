@@ -57,7 +57,7 @@ public class MemberDAO extends SQLiteOpenHelper {
     public int regist(MemberBean mBean) {
         int result = 0;
         String sql = "insert into " + TABLE_NAME
-                + String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                + String.format("( %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
                 , ID, PW, NAME, GENDER, EMAIL, BIRTH, PHONE, ADDRESS, INTRO, SNS, PROFILE_IMG)
                 + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');"
                 , mBean.getId()

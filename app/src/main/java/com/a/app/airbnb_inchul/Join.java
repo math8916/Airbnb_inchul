@@ -27,7 +27,7 @@ public class Join extends Activity implements View.OnClickListener {
         et_birth= (EditText) findViewById(R.id.et_birth);
         et_address= (EditText) findViewById(R.id.et_address);
         et_intro= (EditText) findViewById(R.id.et_intro);
-        et_profile_img= (EditText) findViewById(R.id.et_profileimg);
+        et_profile_img= (EditText) findViewById(R.id.et_profile_img);
         bt_join= (Button) findViewById(R.id.bt_join);
         bt_reset= (Button) findViewById(R.id.bt_reset);
         bt_join.setOnClickListener(this);
@@ -56,12 +56,12 @@ public class Join extends Activity implements View.OnClickListener {
                 member.setName(et_name.getText().toString());
                 member.setPhone(et_phone.getText().toString());
                 member.setEmail(et_email.getText().toString());
-                member.setEmail(et_gender.getText().toString());
-                member.setEmail(et_birth.getText().toString());
-                member.setEmail(et_address.getText().toString());
-                member.setEmail(et_intro.getText().toString());
-                member.setEmail(et_sns.getText().toString());
-                member.setProfile_img("default.jpg");
+                member.setGender(et_gender.getText().toString());
+                member.setBirth(et_birth.getText().toString());
+                member.setAddress(et_address.getText().toString());
+                member.setIntro(et_intro.getText().toString());
+                member.setSns(et_sns.getText().toString());
+                member.setProfile_img(et_profile_img.getText().toString());
 
                 service.regist(member);
 
