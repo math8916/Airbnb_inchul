@@ -6,9 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/**
- * Created by hb2017 on 2016-08-03.
- */
+
 public class MemberDAO extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "member2";
     public static final String ID = "id";
