@@ -16,7 +16,7 @@ public class MemberDAO extends SQLiteOpenHelper {
     public static final String EMAIL = "email";
     public static final String BIRTH = "birth";
     public static final String PHONE = "phone";
-    public static final String ADDRESS = "phone";
+    public static final String ADDRESS = "address";
     public static final String INTRO = "intro";
     public static final String SNS = "sns";
     public static final String PROFILE_IMG = "profile_img";
@@ -59,7 +59,7 @@ public class MemberDAO extends SQLiteOpenHelper {
         String sql = "insert into " + TABLE_NAME
                 + String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
                 , ID, PW, NAME, GENDER, EMAIL, BIRTH, PHONE, ADDRESS, INTRO, SNS, PROFILE_IMG)
-                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',);"
+                + String.format(" values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s');"
                 , mBean.getId()
                 , mBean.getPw()
                 , mBean.getName()
