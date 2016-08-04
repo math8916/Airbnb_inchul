@@ -16,7 +16,28 @@
             </intent-filter>
         </activity>
         <activity android:name=".Join" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".Activity_city_list" />
+        <activity android:name=".Activity_detail" />
+        <activity android:name=".Activity_hosting" />
+        <activity
+            android:name=".Activity_image"
+            android:label="@string/title_activity_activity_image">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CityListActivity"
+            android:label="@string/title_activity_citylist">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
