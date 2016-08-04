@@ -59,7 +59,7 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public boolean login(MemberBean member) {
-        return false;
+        return dao.login(member);
     }
 
     @Override

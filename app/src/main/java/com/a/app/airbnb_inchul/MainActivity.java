@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    EditText et_id,et_password;
+    EditText et_id,et_pw;
     Button bt_login,bt_regist;
     MemberService service;
 
@@ -21,7 +21,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         et_id = (EditText) findViewById(R.id.et_id);
 
-        et_password= (EditText) findViewById(R.id.et_pw);
+        et_pw= (EditText) findViewById(R.id.et_pw);
         bt_login= (Button) findViewById(R.id.bt_login);
         bt_regist= (Button) findViewById(R.id.bt_join);
         bt_login.setOnClickListener(this);
@@ -39,11 +39,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt_login:
                 Toast.makeText(MainActivity.this,"ID:"+et_id.getText().toString()
-                                +"PW:"+et_password.getText().toString()
+                                +"PW:"+et_pw.getText().toString()
                         ,Toast.LENGTH_LONG).show();
                 MemberBean member = new MemberBean();
                 member.setId(et_id.getText().toString());
-                member.setPw(et_password.getText().toString());
+                member.setPw(et_pw.getText().toString());
                 if (service.login(member)) {
                     startActivity(new Intent(this, HomeActivity.class));
                 }else {
